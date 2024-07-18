@@ -15,7 +15,10 @@ const SaitamaAdvice: React.FC = () => {
     try {
       const res = await fetch('/api/advice', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${process.env.API_KEY}`
+         },
         body: JSON.stringify({ prompt: input, seriousMode: isSeriousMode }),
       });
       const data = await res.json();
