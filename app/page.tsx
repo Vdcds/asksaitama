@@ -109,7 +109,7 @@ const SaitamaAdvice: React.FC = () => {
           <form onSubmit={handleSubmit} className="w-full relative mb-4">
             <input
               type="text"
-              placeholder={isSeriousMode ? "State your concern." : "What's your question, worthy opponent?"}
+              placeholder={isSeriousMode ? "State your concern." : "Ask Away I have a sell to look onto"}
               className={`w-full p-3 pr-12 rounded-full focus:outline-none transition-all duration-500 ${
                 isSeriousMode
                   ? 'text-white bg-gray-600 border-red-600 placeholder-gray-400'
