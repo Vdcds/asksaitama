@@ -44,7 +44,7 @@ const SaitamaAdvice: React.FC = () => {
   const shareSaitama = async () => {
     if (saitamaRef.current) {
       try {
-        const canvas = await import('html2canvas').then(mod => mod.default(saitamaRef.current));
+        const canvas = await import('html2canvas').then(mod => mod.default(saitamaRef.current as HTMLElement));
         canvas.toBlob((blob) => {
           if (blob) {
             const file = new File([blob], 'saitama-advice.png', { type: 'image/png' });
